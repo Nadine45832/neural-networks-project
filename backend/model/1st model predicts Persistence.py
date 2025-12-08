@@ -336,6 +336,7 @@ plt.title("RF+NN ROC Curve")
 plt.legend()
 plt.show()
 
+#saving model
 import joblib
 
 # exporting random forest model
@@ -351,3 +352,4 @@ joblib.dump(preprocessor, r"C:\Users\josep\Downloads\preprocessor.pkl")
 nn_model.save(r"C:\Users\josep\Downloads\student_persistence_hybrid_rf_nn.keras")
 
 print("Hybrid RF+NN components saved: rf_leaf_model.pkl, rf_leaf_encoder.pkl, preprocessor.pkl, student_persistence_hybrid_rf_nn.keras")
+
