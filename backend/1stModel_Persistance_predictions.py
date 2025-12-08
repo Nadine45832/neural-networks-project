@@ -334,4 +334,21 @@ plt.xlabel("False Positive Rate")
 plt.ylabel("True Positive Rate")
 plt.title("RF+NN ROC Curve")
 plt.legend()
+
 plt.show()
+
+import joblib
+
+# exporting random forest model
+joblib.dump(rf, r"C:\Users\josep\Downloads\rf_leaf_model.pkl")
+
+# exporting leaf encoder
+joblib.dump(encoder, r"C:\Users\josep\Downloads\rf_leaf_encoder.pkl")
+
+# exporting preprocessor (ColumnTransformer)
+joblib.dump(preprocessor, r"C:\Users\josep\Downloads\preprocessor.pkl")
+
+# exporting NN model
+nn_model.save(r"C:\Users\josep\Downloads\student_persistence_hybrid_rf_nn.keras")
+
+print("Hybrid RF+NN components saved: rf_leaf_model.pkl, rf_leaf_encoder.pkl, preprocessor.pkl, student_persistence_hybrid_rf_nn.keras")
